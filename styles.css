@@ -1,0 +1,325 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* Reseteo general */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin-top: 80px; /* Ajusta según la altura del header */
+}
+
+/* Estilos del Header */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #e65100;
+    padding: 15px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.logo img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    margin-left: 20px;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #ffccbc;
+}
+
+/* Contenedor principal con animación */
+.full-screen-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgba(255, 204, 128, 0.9);
+    color: #bf360c;
+    font-size: 24px;
+    overflow: hidden;
+}
+
+.texto1 {
+    margin-bottom: 80px;
+}
+
+/* Fondo de partículas animadas */
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+/* Botones */
+.button-group {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.cta-button {
+    padding: 12px 18px;
+    background: #e65100;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.cta-button:hover {
+    background: #f8f7f7;
+    color: #d84315;
+    transform: scale(1.05);
+}
+
+/* Contenedor secundario (Negocios) */
+.business-container {
+    width: 100%;
+    min-height: 100vh;
+    padding: 50px 20px;
+    background: rgb(75, 74, 74);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.texto2 {
+    margin-top: 50px;
+    padding: 30px;
+    color: white;
+}
+
+.business-container img {
+    max-width: 40%;
+    height: auto;
+    max-height: 300px;
+    border: 3px solid rgb(232, 102, 14);
+    border-radius: 10px;
+}
+
+/* Estilos para la sección de planes */
+.container {
+    text-align: center;
+    padding: 50px 20px;
+    min-height: 100vh;
+    background: #fbe9e7;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container h1 {
+    font-size: 28px;
+    color: #d84315;
+    margin-top: 45px;
+}
+
+.plans {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.plan {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 280px;
+    height: 380px;
+    text-align: center;
+    transition: transform 0.5s;
+}
+
+.plan:hover {
+    transform: translateY(-5px);
+}
+
+.plan h2 {
+    color: #ff5722;
+    font-size: 22px;
+}
+
+.plan p {
+    margin: 10px 0;
+    color: #555;
+    font-size: 16px;
+}
+
+.plan .cta-button {
+    display: inline-block;
+    margin-top: 70px;
+}
+
+/* Estilos para el formulario */
+/* Ajustar el tamaño del contenedor de partículas dentro del formulario */
+/* Ajustes generales del contenedor */
+.help-center-container {
+    position: relative;
+    width: 100%;
+    min-height: 100vh; /* Asegurar que ocupe toda la pantalla */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #fa6437;
+    overflow: hidden; /* Evitar que las partículas se salgan del contenedor */
+}
+
+/* Hacer que el fondo de partículas cubra todo el contenedor */
+#particles-formulario {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* Asegurar que cubra todo el .help-center-container */
+    z-index: 0; /* Ubicarlo detrás del contenido */
+}
+
+/* Asegurar que el formulario y los textos estén por encima de las partículas */
+.help-center-container h1,
+.formulario {
+    position: relative;
+    z-index: 1;
+    background: rgba(255, 255, 255, 0.9); /* Opcional: agregar fondo semitransparente */
+    padding: 35px;
+    border-radius: 10px;
+}
+
+
+
+/* Línea superior del formulario */
+.formulario::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #e65100;
+}
+
+/* Contenedor de input */
+.input-container {
+    position: relative;
+    width: 100%;
+}
+
+.input-container::before {
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #f37208;
+}
+
+.input-container label {
+    position: absolute;
+    top: -8px;
+    left: 15px;
+    background: #eae5e0;
+    padding: 0 5px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #e65100;
+    z-index: 2;
+}
+
+.formulario input, 
+.formulario textarea {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    background: transparent;
+    font-size: 16px;
+    outline: none;
+}
+
+/* Botón de formulario */
+.formulario button {
+    padding: 14px 20px;
+    background: linear-gradient(45deg, #ff5722, #e65100);
+    color: white;
+    border: none;
+    border-radius: 35px;
+    font-weight: bold;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.formulario button:hover {
+    background: linear-gradient(45deg, #e65100, #bf360c);
+    transform: scale(1.05);
+}
+
+/* Animación de aparición en scroll */
+.container, .full-screen-container {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.container.visible, .full-screen-container.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Footer */
+footer {
+    background: #ff7043;
+    text-align: center;
+    padding: 15px;
+    color: white;
+    font-size: 16px;
+    margin-top: 20px;
+}
