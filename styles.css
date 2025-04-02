@@ -179,6 +179,7 @@ nav a:hover {
     flex-direction: column;
     width: 500px;
     padding: 25px;
+    gap: 15px;
    
 }
 .video-container {
@@ -191,8 +192,6 @@ nav a:hover {
 }
 
 /* Estilos para el formulario */
-/* Ajustar el tamaño del contenedor de partículas dentro del formulario */
-/* Ajustes generales del contenedor */
 .help-center-container {
     position: relative;
     width: 100%;
