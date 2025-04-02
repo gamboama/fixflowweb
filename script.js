@@ -59,5 +59,11 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
    
+    function cargarVideo(src) {
+        let video = document.getElementById('videoPlayer');
+        video.src = src;
+        video.play();
+    }
+
     
 });

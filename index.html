@@ -46,60 +46,45 @@
     </div>
 
 
-    <!-- Planes de suscripción (No eliminado) -->
-    <div class="container" id="subscripciones">
-         <div id="subs-js"></div>
-        <h1>Planes de suscripción</h1>
-        <div class="plans">
-            <div class="plan">
-                <h2>Básico</h2>
-                <p>Ideal para pequeños negocios</p>
-                <p>$10/mes</p>
-                <a href="index.html#" class="cta-button">Suscribirse</a>
+    <!-- Modulos de la empresa -->
+    <div class="container-principal">
+        <h1 class="titulo">Gestión de Inventarios</h1>
+        <div class="container-secundario">
+            <div class="botones">
+                <button onclick="cargarVideo('video1.mp4')" class="cta-button">Modulo Facturas</button>
+                <button onclick="cargarVideo('video2.mp4')" class="cta-button"  >Modulo Inventario</button>
+                <button onclick="cargarVideo('video3.mp4')" class="cta-button" >Modulo Usuarios</button>
             </div>
-            <div class="plan">
-                <h2>Profesional</h2>
-                <p>Más herramientas y soporte premium</p>
-                <p>$20/mes</p>
-                <a href="index.html#" class="cta-button">Suscribirse</a>
-            </div>
-            <div class="plan">
-                <h2>Empresarial</h2>
-                <p>Solución completa para grandes empresas</p>
-                <p>$50/mes</p>
-                <a href="index.html#" class="cta-button">Suscribirse</a>
+            <div class="video-container">
+                <video id="videoPlayer" width="100%" height="100%" controls>
+                    <source src="" type="video/mp4">
+                    Tu navegador no soporta la reproducción de videos.
+                </video>
             </div>
         </div>
     </div>
 
+
     <div class="help-center-container container" id="centro">
       <div id="particles-formulario"></div>
         <h1>Centro de Ayuda</h1>
-        <form class="formulario">
-            <h1>Envíanos tu inquietud</h1>
-        
-            <div class="input-container">
-                <label for="nombre">Nombre</label>
-                <input type="text" id="nombre" required>
-            </div>
-        
-            <div class="input-container">
-                <label for="email">Correo Electrónico</label>
-                <input type="email" id="email" required>
-            </div>
-        
-            <div class="input-container">
-                <label for="telefono">Número de Teléfono</label>
-                <input type="tel" id="telefono" required>
-            </div>
-        
-            <div class="input-container">
-                <label for="mensaje">Escribe tu pregunta aquí</label>
-                <textarea id="mensaje" required></textarea>
-            </div>
-        
-            <button type="submit">Enviar</button>
-        </form>
+        <div class="form-container">
+      
+            <form action="/" class="form">
+              <div>
+                <label for="name" class="label">Name</label>
+                <input type="text" id="name" placeholder="Teff" class="input input-name">
+      
+                <label for="email" class="label">Email</label>
+                <input type="text" id="email" placeholder="platzi@example.com" class="input input-email">
+      
+                <label for="Dude" class="label">Dude</label>
+                <input type="text" id="Dude" placeholder="Escriba su duda aqui " class="input input-password">
+              </div>
+      
+              <input type="submit" value="Send" class="primary-button login-button">
+            </form>
+          </div>
         
     </div>
     <footer>
